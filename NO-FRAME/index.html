@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NØ FRANE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">NØ FRANE</div>
+    <nav class="main-nav">
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT US</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="shop">
+      <div class="hero-left">
+        <h1>Redefine your street</h1>
+        <p>
+          Minimalist design. Bold statement.
+          Premium quality streetwear for the digital generation.
+        </p>
+        <a href="#featured" class="btn btn-light">SHOP NOW</a>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-photo">
+          <div class="logo-mark">NØ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section featured-section" id="featured">
+      <div class="section-top">
+        <a href="#" class="back-link">← Back</a>
+        <h2 class="section-title">FEATURED</h2>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card is-sold-out">
+          <div class="product-visual dark"></div>
+          <div class="sold-out-label">SØLD ØUT</div>
+          <h3>SIGNATURE CREW</h3>
+          <p>Charcoal</p>
+          <span>$125.00</span>
+        </article>
+
+        <article class="product-card active-product">
+          <div class="product-visual grey"></div>
+          <h3>SIGNATURE CREW</h3>
+          <p>Heather Grey</p>
+          <span>$100.00</span>
+        </article>
+
+        <article class="product-card is-sold-out">
+          <div class="product-visual sand"></div>
+          <div class="sold-out-label">SØLD ØUT</div>
+          <h3>SIGNATURE CREW</h3>
+          <p>Sand</p>
+          <span>$125.00</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="section product-detail-section">
+      <div class="section-top">
+        <a href="#" class="back-link">← Back</a>
+      </div>
+
+      <div class="product-detail">
+        <div class="detail-left">
+          <div class="main-product-photo grey"></div>
+
+          <div class="detail-caption">
+            <div>
+              <h2>SIGNATURE CREW</h2>
+              <p>Heather Grey</p>
+              <span>$100.00</span>
+            </div>
+            <button class="info-circle">i</button>
+          </div>
+        </div>
+
+        <div class="detail-right">
+          <div class="description-block">
+            <p>
+              A premium heavyweight cotton construction with an oversized fit.
+              Features signature NØ FRANE branding on sleeve and chest logo.
+              Perfect for everyday wear with a statement edge.
+            </p>
+          </div>
+
+          <div class="selector-group">
+            <h4>SIZES</h4>
+            <div class="size-row">
+              <button class="size-box">S</button>
+              <button class="size-box">M</button>
+              <button class="size-box active">L</button>
+              <button class="size-box">XL</button>
+            </div>
+          </div>
+
+          <div class="detail-meta-row">
+            <div class="selector-group">
+              <h4>QUANTITIES</h4>
+              <div class="qty-row">
+                <button class="qty-box">−</button>
+                <div class="qty-value">1</div>
+                <button class="qty-box">+</button>
+              </div>
+            </div>
+
+            <div class="selector-group stock-group">
+              <h4>AVAILABLE STOCKS</h4>
+              <div class="stock-value"><span>150</span>/500</div>
+            </div>
+          </div>
+
+          <button class="btn btn-dark add-cart-btn">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT MATERIAL / INFO -->
+    <section class="section product-detail-section">
+      <div class="section-top">
+        <a href="#" class="back-link">← Back</a>
+      </div>
+
+      <div class="product-detail info-layout">
+        <div class="detail-left">
+          <div class="main-product-photo grey"></div>
+
+          <div class="detail-caption">
+            <div>
+              <h2>SIGNATURE CREW</h2>
+              <p>Heather Grey</p>
+              <span>$100.00</span>
+            </div>
+            <button class="info-circle filled">i</button>
+          </div>
+        </div>
+
+        <div class="detail-right product-specs">
+          <p><strong>MATERIAL:</strong> 100% heavyweight cotton.</p>
+          <p><strong>FIT:</strong> Oversized fit.</p>
+          <p><strong>DETAILS:</strong> Sleeve branding and front chest logo.</p>
+          <p><strong>CARE:</strong> Wash cold, dry flat.</p>
+          <p><strong>ORIGIN:</strong> Designed for urban everyday wear.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART -->
+    <section class="section modal-section">
+      <div class="modal-card">
+        <div class="modal-top">
+          <h2>CART</h2>
+          <a href="#" class="btn btn-back-small">← Back</a>
+        </div>
+
+        <div class="cart-item">
+          <div class="cart-thumb grey small"></div>
+
+          <div class="cart-item-infos">
+            <h3>SIGNATURE CREW</h3>
+            <p>Heather Grey</p>
+            <span>$100.00</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn btn-dark">ORDER NOW</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN COMMUNITY -->
+    <section class="section modal-section">
+      <div class="modal-card form-card">
+        <div class="modal-top">
+          <h2>JOIN THE COMMUNITY</h2>
+          <a href="#" class="btn btn-back-small">← Back</a>
+        </div>
+
+        <form class="form-layout">
+          <input type="email" placeholder="E-MAIL" />
+          <input type="text" placeholder="USERNAME" />
+          <input type="password" placeholder="PASSWORD" />
+
+          <div class="dual-actions">
+            <button type="button" class="btn btn-text">ALREADY A MEMBER ?</button>
+            <button type="submit" class="btn btn-dark">LET’S GO</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- LOGIN -->
+    <section class="section modal-section">
+      <div class="modal-card form-card">
+        <div class="modal-top">
+          <h2>HEY ! WASSUP ?</h2>
+          <a href="#" class="btn btn-back-small">← Back</a>
+        </div>
+
+        <form class="form-layout">
+          <input type="email" placeholder="E-MAIL" value="noahlaurent@exemple.com" />
+          <input type="password" placeholder="PASSWORD" value="••••••••••••••••" />
+
+          <div class="dual-actions">
+            <button type="button" class="btn btn-text">NOT A MEMBER</button>
+            <button type="submit" class="btn btn-dark">LET’S GO</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- WELCOME -->
+    <section class="section modal-section">
+      <div class="modal-card welcome-card">
+        <div class="avatar-circle"></div>
+        <h2>Welcome back Noah</h2>
+
+        <div class="welcome-actions">
+          <button class="btn btn-outline">WRONG ACCOUNT ?</button>
+          <button class="btn btn-dark">FINISH SHOPPING</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT -->
+    <section class="section modal-section" id="contact">
+      <div class="modal-card payment-card">
+        <h2>PAYMENT AND DELIVERY INFOS</h2>
+
+        <form class="payment-grid">
+          <input type="email" placeholder="E-MAIL" />
+          <input type="text" placeholder="CARD NUMBER" />
+          <input type="text" placeholder="USERNAME" />
+          <input type="text" placeholder="CVC" />
+          <input type="text" placeholder="EXPIRATION" />
+          <input type="text" placeholder="COUNTRY" />
+          <input type="text" placeholder="ADDRESS" />
+          <input type="text" placeholder="PHONE NUMBER" />
+
+          <div class="payment-actions">
+            <button type="button" class="btn btn-text">NO MODIFICATION</button>
+            <button type="submit" class="btn btn-dark">FINISH</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ORDER COMPLETED -->
+    <section class="section modal-section" id="about">
+      <div class="modal-card completed-card">
+        <div class="logo-mark dark-mark">NØ</div>
+        <h2>ORDER COMPLETED</h2>
+        <button class="btn btn-dark">GO BACK TO HOMEPAGE</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
