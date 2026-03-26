@@ -652,3 +652,25 @@ input {
 #featured {
     margin-top: 20px; /* Ajuste selon ton design */
 }
+
+#cart-section,
+#order-completed {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+#cart-section .modal-card,
+#order-completed .modal-card {
+  width: min(760px, 100%);
+}
+
+#order-completed {
+  display: none;
+}
+
+#order-completed:target {
+  display: flex;
+}
