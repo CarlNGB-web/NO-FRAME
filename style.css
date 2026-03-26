@@ -640,3 +640,15 @@ input {
     width: 100%;
   }
 }
+
+#cart-section, #order-completed {
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    padding: 40px; /* Donne un peu de marge */
+}
+
+#featured {
+    margin-top: 20px; /* Ajuste selon ton design */
+}
