@@ -197,15 +197,11 @@
   const featured = document.getElementById("featured");
   const productPage = document.getElementById("product-page");
   const productInfo = document.getElementById("product-info");
-  const cartSection = document.getElementById("cart-section");
-  const completedSection = document.getElementById("order-completed");
 
   window.addEventListener("wheel", function(e) {
     const featuredRect = featured.getBoundingClientRect();
     const productRect = productPage.getBoundingClientRect();
     const infoRect = productInfo.getBoundingClientRect();
-    const cartRect = cartSection.getBoundingClientRect();
-    const completedRect = completedSection.getBoundingClientRect();
 
     const isInFeatured =
       featuredRect.top <= 0 && featuredRect.bottom > 0;
@@ -216,37 +212,16 @@
     const isInInfo =
       infoRect.top <= 0 && infoRect.bottom > 0;
 
-    const isInCart =
-      cartRect.top <= 0 && cartRect.bottom > 0;
-
-    const isInCompleted =
-      completedRect.top <= 0 && completedRect.bottom > 0;
-
-    // FEATURED : bloque vers le bas
     if (isInFeatured && e.deltaY > 0) {
       e.preventDefault();
     }
 
-    // PRODUCT : bloque seulement si on essaie d'aller plus bas
-    // alors qu'on est déjà à la fin visuelle de la section
     if (isInProduct && e.deltaY > 0 && productRect.bottom <= window.innerHeight) {
       e.preventDefault();
     }
 
-    // PRODUCT INFO : même logique
     if (isInInfo && e.deltaY > 0 && infoRect.bottom <= window.innerHeight) {
       e.preventDefault();
     }
-
-    // CART : bloque tout
-    if (isInCart) {
-      e.preventDefault();
-    }
-
-    // ORDER COMPLETED : bloque tout
-    if (isInCompleted) {
-      e.preventDefault();
-    }
-
   }, { passive: false });
 </script>
