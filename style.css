@@ -52,6 +52,7 @@ input {
   z-index: 50;
   background: rgba(233, 227, 216, 0.92);
   backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .brand {
@@ -69,6 +70,13 @@ input {
   font-weight: 700;
   font-size: 0.92rem;
   letter-spacing: 0.02em;
+  opacity: 0.78;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
 }
 
 /* HERO */
@@ -93,6 +101,8 @@ input {
   line-height: 0.9;
   margin: 0 0 24px;
   max-width: 520px;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
 }
 
 .hero-left p {
@@ -100,11 +110,15 @@ input {
   font-size: 1rem;
   line-height: 1.75;
   margin: 0 0 24px;
+  opacity: 0.82;
 }
 
 .scroll-hint {
   font-weight: 600;
   opacity: 0.7;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero-right {
@@ -145,7 +159,7 @@ input {
   margin: 0;
   font-family: "Anton", sans-serif;
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.03em;
 }
 
 /* FEATURED */
@@ -162,6 +176,11 @@ input {
 
 .product-card {
   position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
 }
 
 .product-card h3 {
@@ -169,11 +188,13 @@ input {
   font-size: 1.8rem;
   line-height: 1;
   margin: 16px 0 6px;
+  letter-spacing: 0.02em;
 }
 
 .product-card p {
   margin: 0 0 6px;
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .product-card span {
@@ -192,6 +213,11 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-visual img {
+  transform: scale(1.03);
 }
 
 .product-visual.dark {
@@ -235,6 +261,11 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.main-product-photo:hover img {
+  transform: scale(1.03);
 }
 
 .detail-caption {
@@ -250,11 +281,16 @@ input {
   font-family: "Anton", sans-serif;
   font-size: 2rem;
   line-height: 1;
+  letter-spacing: 0.03em;
 }
 
 .detail-caption p {
   margin: 0 0 6px;
   color: var(--muted);
+}
+
+.detail-caption span {
+  font-weight: 700;
 }
 
 .info-circle-link {
@@ -269,9 +305,10 @@ input {
 }
 
 .description-block {
-  max-width: 420px;
-  line-height: 1.8;
+  max-width: 680px;
+  line-height: 1.9;
   margin-bottom: 34px;
+  font-size: 1rem;
 }
 
 .selector-group h4 {
@@ -344,6 +381,13 @@ input {
   padding: 18px 34px;
   min-height: 60px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
 }
 
 .btn-back-small {
@@ -352,6 +396,8 @@ input {
   padding: 12px 18px;
   min-height: auto;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .add-cart-btn {
@@ -395,6 +441,7 @@ input {
   padding: 28px 24px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .modal-top {
@@ -412,6 +459,7 @@ input {
   font-size: 2.4rem;
   line-height: 1;
   font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .cart-item {
@@ -439,11 +487,18 @@ input {
   font-family: "Anton", sans-serif;
   font-size: 2rem;
   line-height: 1;
+  letter-spacing: 0.03em;
 }
 
 .cart-item-infos p {
   margin: 0 0 8px;
   color: var(--muted);
+  opacity: 0.72;
+}
+
+.cart-item-infos span {
+  display: inline-block;
+  font-weight: 700;
 }
 
 .modal-actions {
@@ -476,8 +531,8 @@ input {
 
 .about-text,
 .contact-text {
-  max-width: 620px;
-  line-height: 1.8;
+  max-width: 680px;
+  line-height: 1.9;
   font-size: 1rem;
 }
 
@@ -524,6 +579,10 @@ input {
     flex-wrap: wrap;
   }
 
+  .main-nav a {
+    font-size: 0.8rem;
+  }
+
   .section,
   .catalog-section {
     width: min(100%, calc(100% - 32px));
@@ -537,6 +596,7 @@ input {
   .hero-left h1 {
     font-size: clamp(2.8rem, 12vw, 4.2rem);
     max-width: 100%;
+    letter-spacing: -0.5px;
   }
 
   .hero-left p {
@@ -576,6 +636,10 @@ input {
   .btn-back-small,
   .add-cart-btn {
     width: 100%;
+  }
+
+  .product-card:hover {
+    transform: none;
   }
 }
 
