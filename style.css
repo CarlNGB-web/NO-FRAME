@@ -1,13 +1,12 @@
 :root {
   --bg: #e9e3d8;
-  --surface: rgba(255, 255, 255, 0.28);
+  --surface: rgba(255, 255, 255, 0.30);
   --white: #ffffff;
   --black: #050505;
   --text: #111111;
   --muted: #666666;
   --border: rgba(0, 0, 0, 0.12);
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  --radius: 8px;
 }
 
 * {
@@ -47,7 +46,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 56px;
+  padding: 22px 48px;
   position: sticky;
   top: 0;
   z-index: 50;
@@ -63,24 +62,22 @@ input {
 
 .main-nav {
   display: flex;
-  gap: 36px;
+  gap: 32px;
 }
 
 .main-nav a {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
 }
 
 /* HERO */
 
 .hero {
-  min-height: calc(100vh - 92px);
-  display: flex;
-}
-
-.hero-left,
-.hero-right {
-  width: 50%;
+  min-height: calc(100vh - 82px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
 }
 
 .hero-left {
@@ -92,17 +89,17 @@ input {
 
 .hero-left h1 {
   font-family: "Anton", sans-serif;
-  font-size: clamp(3.4rem, 7vw, 6.2rem);
-  line-height: 0.95;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 0.9;
   margin: 0 0 24px;
-  max-width: 460px;
+  max-width: 520px;
 }
 
 .hero-left p {
-  max-width: 420px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin: 0 0 28px;
+  max-width: 430px;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0 0 24px;
 }
 
 .scroll-hint {
@@ -110,12 +107,19 @@ input {
   opacity: 0.7;
 }
 
+.hero-right {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
 .hero-photo {
+  width: 100%;
   height: 100%;
-  min-height: 640px;
+  min-height: calc(100vh - 82px);
   background:
     linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
-    url("Hero-picture.jpg") center/cover no-repeat;
+    url("Hero-picture.jpg") center center / cover no-repeat;
 }
 
 /* SECTIONS */
@@ -123,7 +127,7 @@ input {
 .section,
 .catalog-section {
   width: min(1200px, calc(100% - 80px));
-  margin: 80px auto;
+  margin: 72px auto;
 }
 
 .section-top {
@@ -180,8 +184,7 @@ input {
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: 3px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
   background: #d8d3c8;
 }
 
@@ -224,7 +227,7 @@ input {
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #d8d3c8;
 }
 
@@ -355,7 +358,7 @@ input {
   width: 220px;
 }
 
-/* INFO SECTION */
+/* PRODUCT INFO */
 
 .info-layout {
   align-items: start;
@@ -375,7 +378,7 @@ input {
   font-weight: 400;
 }
 
-/* MODALS / CART */
+/* CART / MODAL */
 
 .modal-section {
   display: flex;
@@ -389,7 +392,7 @@ input {
   width: min(760px, 100%);
   background: var(--surface);
   border-radius: 0;
-  padding: 28px 24px 28px;
+  padding: 28px 24px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(4px);
 }
@@ -482,12 +485,8 @@ input {
 
 @media (max-width: 1024px) {
   .hero {
-    flex-direction: column;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 100%;
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .hero-left {
@@ -517,7 +516,7 @@ input {
     flex-direction: column;
     gap: 18px;
     align-items: flex-start;
-    padding: 24px;
+    padding: 20px;
   }
 
   .main-nav {
@@ -536,7 +535,8 @@ input {
   }
 
   .hero-left h1 {
-    font-size: clamp(2.6rem, 12vw, 4rem);
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    max-width: 100%;
   }
 
   .hero-left p {
