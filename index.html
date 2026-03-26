@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NØ FRANE</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+
   <header class="site-header">
     <div class="brand">NØ FRANE</div>
     <nav class="main-nav">
@@ -28,6 +21,8 @@
           Minimalist design. Bold statement.
           Premium quality streetwear for the digital generation.
         </p>
+
+        <p class="scroll-hint">Scroll to discover ↓</p>
       </div>
 
       <div class="hero-right">
@@ -38,7 +33,7 @@
     </section>
 
     <!-- FEATURED -->
-    <section class="section featured-section" id="featured">
+    <section class="catalog-section" id="featured">
       <div class="section-top">
         <a href="#" class="back-link">← Back</a>
         <h2 class="section-title">FEATURED</h2>
@@ -53,12 +48,14 @@
           <span>$125.00</span>
         </article>
 
-        <article class="product-card active-product">
-          <div class="product-visual grey"></div>
-          <h3>SIGNATURE CREW</h3>
-          <p>Heather Grey</p>
-          <span>$100.00</span>
-        </article>
+    <a href="#product-page" class="product-link">
+  <article class="product-card active-product">
+    <div class="product-visual grey"></div>
+    <h3>SIGNATURE CREW</h3>
+    <p>Heather Grey</p>
+    <span>$100.00</span>
+  </article>
+</a>
 
         <article class="product-card is-sold-out">
           <div class="product-visual sand"></div>
@@ -71,7 +68,7 @@
     </section>
 
     <!-- PRODUCT DETAIL -->
-    <section class="section product-detail-section">
+    <section class="section product-detail-section" id="product-page">
       <div class="section-top">
         <a href="#" class="back-link">← Back</a>
       </div>
@@ -86,7 +83,7 @@
               <p>Heather Grey</p>
               <span>$100.00</span>
             </div>
-            <button class="info-circle">i</button>
+            <a href="#product-info" class="info-circle-link">i</a>
           </div>
         </div>
 
@@ -125,13 +122,13 @@
             </div>
           </div>
 
-          <button class="btn btn-dark add-cart-btn">Add to cart</button>
+          <button class="btn btn-dark add-cart-btn" onclick="location.href='#cart-section'">Add to cart</button>
         </div>
       </div>
     </section>
 
     <!-- PRODUCT MATERIAL / INFO -->
-    <section class="section product-detail-section">
+    <section class="section product-detail-section" id="product-info">
       <div class="section-top">
         <a href="#" class="back-link">← Back</a>
       </div>
@@ -146,7 +143,7 @@
               <p>Heather Grey</p>
               <span>$100.00</span>
             </div>
-            <button class="info-circle filled">i</button>
+            <a href="#product-page" class="info-circle-link">i</a>
           </div>
         </div>
 
@@ -161,7 +158,7 @@
     </section>
 
     <!-- CART -->
-    <section class="section modal-section">
+    <section class="section modal-section" id="cart-section">
       <div class="modal-card">
         <div class="modal-top">
           <h2>CART</h2>
@@ -179,96 +176,77 @@
         </div>
 
         <div class="modal-actions">
-          <button class="btn btn-dark">ORDER NOW</button>
+          <button class="btn btn-dark" onclick="location.href='#order-completed'">ORDER NOW</button>
         </div>
       </div>
     </section>
 
-    <!-- JOIN COMMUNITY -->
-    <section class="section modal-section">
-      <div class="modal-card form-card">
-        <div class="modal-top">
-          <h2>JOIN THE COMMUNITY</h2>
-          <a href="#" class="btn btn-back-small">← Back</a>
-        </div>
-
-        <form class="form-layout">
-          <input type="email" placeholder="E-MAIL" />
-          <input type="text" placeholder="USERNAME" />
-          <input type="password" placeholder="PASSWORD" />
-
-          <div class="dual-actions">
-            <button type="button" class="btn btn-text">ALREADY A MEMBER ?</button>
-            <button type="submit" class="btn btn-dark">LET’S GO</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- LOGIN -->
-    <section class="section modal-section">
-      <div class="modal-card form-card">
-        <div class="modal-top">
-          <h2>HEY ! WASSUP ?</h2>
-          <a href="#" class="btn btn-back-small">← Back</a>
-        </div>
-
-        <form class="form-layout">
-          <input type="email" placeholder="E-MAIL" value="noahlaurent@exemple.com" />
-          <input type="password" placeholder="PASSWORD" value="••••••••••••••••" />
-
-          <div class="dual-actions">
-            <button type="button" class="btn btn-text">NOT A MEMBER</button>
-            <button type="submit" class="btn btn-dark">LET’S GO</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- WELCOME -->
-    <section class="section modal-section">
-      <div class="modal-card welcome-card">
-        <div class="avatar-circle"></div>
-        <h2>Welcome back Noah</h2>
-
-        <div class="welcome-actions">
-          <button class="btn btn-outline">WRONG ACCOUNT ?</button>
-          <button class="btn btn-dark">FINISH SHOPPING</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PAYMENT -->
-    <section class="section modal-section" id="contact">
-      <div class="modal-card payment-card">
-        <h2>PAYMENT AND DELIVERY INFOS</h2>
-
-        <form class="payment-grid">
-          <input type="email" placeholder="E-MAIL" />
-          <input type="text" placeholder="CARD NUMBER" />
-          <input type="text" placeholder="USERNAME" />
-          <input type="text" placeholder="CVC" />
-          <input type="text" placeholder="EXPIRATION" />
-          <input type="text" placeholder="COUNTRY" />
-          <input type="text" placeholder="ADDRESS" />
-          <input type="text" placeholder="PHONE NUMBER" />
-
-          <div class="payment-actions">
-            <button type="button" class="btn btn-text">NO MODIFICATION</button>
-            <button type="submit" class="btn btn-dark">FINISH</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
+  
     <!-- ORDER COMPLETED -->
-    <section class="section modal-section" id="about">
+  <section class="section modal-section" id="order-completed"> 
       <div class="modal-card completed-card">
         <div class="logo-mark dark-mark">NØ</div>
         <h2>ORDER COMPLETED</h2>
-        <button class="btn btn-dark">GO BACK TO HOMEPAGE</button>
+        <button class="btn btn-dark" onclick="location.href='#shop'">GO BACK TO HOMEPAGE</button>
       </div>
     </section>
   </main>
-</body>
-</html>
+
+         
+<script>
+  const featured = document.getElementById("featured");
+  const productPage = document.getElementById("product-page");
+  const productInfo = document.getElementById("product-info");
+  const cartSection = document.getElementById("cart-section");
+  const completedSection = document.getElementById("order-completed");
+
+  window.addEventListener("wheel", function(e) {
+    const featuredRect = featured.getBoundingClientRect();
+    const productRect = productPage.getBoundingClientRect();
+    const infoRect = productInfo.getBoundingClientRect();
+    const cartRect = cartSection.getBoundingClientRect();
+    const completedRect = completedSection.getBoundingClientRect();
+
+    const isInFeatured =
+      featuredRect.top <= 0 && featuredRect.bottom > 0;
+
+    const isInProduct =
+      productRect.top <= 0 && productRect.bottom > 0;
+
+    const isInInfo =
+      infoRect.top <= 0 && infoRect.bottom > 0;
+
+    const isInCart =
+      cartRect.top <= 0 && cartRect.bottom > 0;
+
+    const isInCompleted =
+      completedRect.top <= 0 && completedRect.bottom > 0;
+
+    // FEATURED : bloque vers le bas
+    if (isInFeatured && e.deltaY > 0) {
+      e.preventDefault();
+    }
+
+    // PRODUCT : bloque seulement si on essaie d'aller plus bas
+    // alors qu'on est déjà à la fin visuelle de la section
+    if (isInProduct && e.deltaY > 0 && productRect.bottom <= window.innerHeight) {
+      e.preventDefault();
+    }
+
+    // PRODUCT INFO : même logique
+    if (isInInfo && e.deltaY > 0 && infoRect.bottom <= window.innerHeight) {
+      e.preventDefault();
+    }
+
+    // CART : bloque tout
+    if (isInCart) {
+      e.preventDefault();
+    }
+
+    // ORDER COMPLETED : bloque tout
+    if (isInCompleted) {
+      e.preventDefault();
+    }
+
+  }, { passive: false });
+</script>
