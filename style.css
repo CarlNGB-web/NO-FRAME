@@ -673,3 +673,10 @@ input {
 #order-completed:target {
   display: flex;
 }
+
+.product-visual,
+.main-product-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
